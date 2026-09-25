@@ -1,46 +1,65 @@
-# Astro Starter Kit: Basics
+[![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff)](https://astro.build/)
+
+# About
+
+Astro 構築で使用するボイラーテンプレート
+
+## Tech Stack
+
+| stack | version |
+| --- | --- |
+| Astro | 7.3.4 |
+| eslint | 10.11.0 |
+| eslint-plugin-astro | 3.2.1 |
+| eslint-plugin-jsx-a11y | 6.10.2 |
+| prettier | 3.9.8 |
+| prettier-plugin-astro | 1.0.1 |
+| stylelint | 2.0.0 |
+
+## Getting Started
+
+ローカル開発：
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+URL: [http://localhost:4321](http://localhost:4321)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+│   └── 加工なしでそのまま配信される静的ファイル (robots.txt, favicon etc.)
+├── src/
+│   ├── assets/       ※慣例名。importするとビルドで最適化・ハッシュ付与される (image etc.)
+│   ├── components/   ※慣例名。再利用するUIコンポーネント (.astro / React etc.)
+│   ├── layouts/      ※慣例名。<slot /> でページを包むレイアウトコンポーネント
+│   ├── pages/        ※必須。ファイルがそのままURLになる (file-based routing)
+│   └── styles/       ※慣例名。グローバルCSSなど
+├── astro.config.mjs  Astro設定ファイル
+├── tsconfig.json     TypeScript設定ファイル
+└── package.json      パッケージ情報・スクリプト定義
 ```
+* /src/content/: Markdown, MDX などファイルを格納する場所として実装する場合もあり
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+[our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## Commands
 
-All commands are run from the root of the project, from a terminal:
+| Command | Action |
+| :--- | :--- |
+| `pnpm dev`| 開発サーバー起動 |
+| `pnpm build`| ビルド |
+| `pnpm preview`| プレビュー |
+| `pnpm astro ...`| Astro CLI コマンド実行 |
+| `pnpm astro -- --help`| Astro CLI ヘルプ |
+| `pnpm lint` | リンターを実行 |
+| `pnpm lint:fix` | リンターを実行して修正を適用 |
+| `pnpm fmt` | フォーマッターを実行 |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Learn More
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[our documentation](https://docs.astro.build)
+[Discord server](https://astro.build/chat).
