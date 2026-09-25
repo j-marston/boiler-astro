@@ -1,4 +1,6 @@
 [![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff)](https://astro.build/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)](https://www.typescriptlang.org/ja/)
+[![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&style=flat)](https://reactjs.org/)
 
 # About
 
